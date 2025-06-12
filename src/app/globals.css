@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.main_container,
+.header_container div,
+.secao_texto div {
+    max-width: 1024px;
+    margin: auto;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .header_container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header_container div img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .secao_texto div h1 {
+        font-size: 32px;
+    }
+
+    .secao_texto div p {
+        font-size: 16px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
