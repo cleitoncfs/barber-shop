@@ -19,6 +19,13 @@ body,
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Foco acessível para botões e links */
+button:focus,
+a:focus {
+    outline: 2px solid #b2987d;
+    outline-offset: 4px;
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .header_container {

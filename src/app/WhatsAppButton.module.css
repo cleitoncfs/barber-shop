@@ -1,0 +1,56 @@
+.whatsappIcon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    border-radius: 50%; /* Formato circular */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+    transition: all 0.3s ease;
+}
+
+.whatsappIcon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.whatsappImage {
+    width: 34px; /* Tamanho ajustado */
+    height: 34px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Faz o ícone ficar branco */
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.whatsappIcon:hover {
+    animation: float 1.5s ease-in-out infinite;
+}
+
+/* Efeito para dispositivos móveis */
+@media (max-width: 768px) {
+    .whatsappIcon {
+        width: 56px;
+        height: 56px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsappImage {
+        width: 30px;
+        height: 30px;
+    }
+}

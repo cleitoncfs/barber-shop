@@ -46,27 +46,24 @@
 }
 
 .header_container button {
-    padding: 10px 15px;
+    padding: 8px 12px; /* Reduzindo o padding */
     display: flex;
     align-items: center;
-    font-size: 30px;
+    font-size: 24px; /* Tamanho menor para o ícone */
     background-color: transparent;
     border: 2px solid #b2987d;
     border-radius: 25px;
     cursor: pointer;
     transition: all 0.3s ease;
     color: #b2987d;
+    width: auto; /* Garante que não ocupe largura extra */
+    height: auto; /* Altura automática */
+    margin: 0; /* Remove margens padrão */
 }
 
 .header_container button:hover {
     background-color: #b2987d;
     color: #fff;
-}
-
-button:focus,
-a:focus {
-    outline: 2px solid #b2987d;
-    outline-offset: 4px;
 }
 
 .main_container {
@@ -195,22 +192,6 @@ a:focus {
     color: #000;
 }
 
-.btnWhatsapp {
-    display: inline-block;
-    margin-top: 20px;
-    background-color: #25d366;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btnWhatsapp:hover {
-    background-color: #1ebc59;
-}
-
 @media (max-width: 768px) {
     .secao_texto div h1 {
         font-size: 32px;
@@ -233,10 +214,5 @@ a:focus {
 
     .secao_texto div {
         padding: 0;
-    }
-
-    .btnWhatsapp {
-        padding: 10px 20px;
-        font-size: 14px;
     }
 }
