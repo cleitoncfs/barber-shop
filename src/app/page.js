@@ -5,7 +5,12 @@ import Banner from "../../public/banner.jpg";
 import Logo from "../../public/logo.png";
 import { useState } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
-import { FaExternalLinkAlt } from "react-icons/fa"; // Ícone para o link externo
+import {
+    FaExternalLinkAlt,
+    FaWhatsapp,
+    FaInstagram,
+    FaFacebookF,
+} from "react-icons/fa";
 
 export default function Page() {
     const [ehTemaEscuro, setEhTemaEscuro] = useState(false);
@@ -60,6 +65,15 @@ export default function Page() {
                         </p>
                         <p className={estilos.assinatura}>S. Kelly</p>
                     </div>
+                    <a
+                        href="https://wa.me/5567992011664"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={estilos.btnWhatsapp}
+                        aria-label="Agendar corte pelo WhatsApp"
+                    >
+                        Agende seu horário via WhatsApp
+                    </a>
                 </section>
             </main>
 
@@ -82,6 +96,32 @@ export default function Page() {
                         <FaExternalLinkAlt className={estilos.linkIcon} />
                     </a>
                 </p>
+                <div className={estilos.iconesRedes}>
+                    <a
+                        href="https://instagram.com"
+                        target="_blank"
+                        aria-label="Instagram"
+                        rel="noopener noreferrer"
+                    >
+                        <FaInstagram />
+                    </a>
+                    <a
+                        href="https://facebook.com"
+                        target="_blank"
+                        aria-label="Facebook"
+                        rel="noopener noreferrer"
+                    >
+                        <FaFacebookF />
+                    </a>
+                    <a
+                        href="https://wa.me/5567992011664"
+                        target="_blank"
+                        aria-label="WhatsApp"
+                        rel="noopener noreferrer"
+                    >
+                        <FaWhatsapp />
+                    </a>
+                </div>
             </footer>
         </div>
     );

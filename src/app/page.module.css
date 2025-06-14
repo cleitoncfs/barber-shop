@@ -1,13 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
 
+/* Transições suaves para temas */
+.modo_claro,
+.modo_escuro {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body,
+.secao_texto,
+.footer,
+.header_container {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .modo_claro {
     background-color: #fff;
     color: #000;
 }
 
 .modo_escuro {
-    background-color: hsl(0, 3%, 14%);
-    color: #fff;
+    background-color: #1a1a1a;
+    color: #eeeeee;
 }
 
 .header_container {
@@ -15,6 +28,10 @@
     max-height: 10vh;
     padding: 0 20px;
     display: flex;
+    position: sticky;
+    top: 0;
+    background-color: inherit;
+    z-index: 1000;
 }
 
 .header_container div {
@@ -59,10 +76,6 @@ a:focus {
     outline-offset: 4px;
 }
 
-.modo_escuro .header_container button {
-    color: #fff;
-}
-
 .main_container {
     display: flex;
     flex-direction: column;
@@ -90,7 +103,7 @@ a:focus {
 
 .secao_texto div {
     width: 100%;
-    max-width: 760px; /* Reduzido de 900px para leitura mais confortável */
+    max-width: 760px;
     margin: 0 auto;
     padding: 20px;
     display: block;
@@ -128,18 +141,6 @@ a:focus {
     color: #eeeeee;
 }
 
-.modo_claro,
-.modo_escuro {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.secao_texto,
-.footer,
-.header_container,
-body {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 .assinatura {
     margin-top: 30px;
     font-family: "Great Vibes", cursive;
@@ -148,40 +149,25 @@ body {
     color: #b2987d;
 }
 
-@media (max-width: 768px) {
-    .secao_texto div h1 {
-        font-size: 32px;
-    }
-
-    .secao_texto div p {
-        font-size: 16px;
-        margin-bottom: 14px;
-    }
-
-    .assinatura {
-        font-size: 40px;
-    }
-}
-
 .footer {
     width: 100%;
     padding: 20px;
     text-align: center;
     background-color: #b2987d;
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .modo_escuro .footer {
     background-color: #333;
 }
 
-.footerCopyright {
-    font-size: 14px;
-    font-weight: 500;
-}
-
+.footerCopyright,
 .footerCredits {
     font-size: 14px;
+    font-weight: 500;
 }
 
 .footerLink {
@@ -199,14 +185,51 @@ body {
     font-size: 14px;
 }
 
-@media (max-width: 600px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
+.iconesRedes {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.iconesRedes a {
+    color: white;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.iconesRedes a:hover {
+    color: #000;
+}
+
+.btnWhatsapp {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btnWhatsapp:hover {
+    background-color: #1ebc59;
+}
+
+@media (max-width: 768px) {
+    .secao_texto div h1 {
+        font-size: 32px;
     }
 
-    .footerCredits {
-        margin-top: 10px;
+    .secao_texto div p {
+        font-size: 16px;
+        margin-bottom: 14px;
+    }
+
+    .assinatura {
+        font-size: 40px;
     }
 }
 
@@ -217,5 +240,10 @@ body {
 
     .secao_texto div {
         padding: 0;
+    }
+
+    .btnWhatsapp {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 }
