@@ -64,16 +64,16 @@ export default function Page() {
                             podemos elevar seu visual ao próximo nível!
                         </p>
                         <p className={estilos.assinatura}>S. Kelly</p>
+                        <a
+                            href="https://wa.me/5567992011664"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={estilos.btnWhatsapp}
+                            aria-label="Agendar corte pelo WhatsApp"
+                        >
+                            Agende seu horário via WhatsApp
+                        </a>
                     </div>
-                    <a
-                        href="https://wa.me/5567992011664"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={estilos.btnWhatsapp}
-                        aria-label="Agendar corte pelo WhatsApp"
-                    >
-                        Agende seu horário via WhatsApp
-                    </a>
                 </section>
             </main>
 
@@ -96,6 +96,8 @@ export default function Page() {
                         <FaExternalLinkAlt className={estilos.linkIcon} />
                     </a>
                 </p>
+
+                {/* ✅ Ícones das redes sociais */}
                 <div className={estilos.iconesRedes}>
                     <a
                         href="https://instagram.com"
