@@ -12,6 +12,13 @@
     margin: auto;
 }
 
+body,
+.secao_texto,
+.footer,
+.header_container {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .header_container {
