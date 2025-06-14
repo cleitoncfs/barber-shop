@@ -21,7 +21,10 @@ export default function Page() {
             <header className={estilos.header_container}>
                 <div>
                     <Image src={Logo} alt="logomarca" />
-                    <button onClick={alterarTema}>
+                    <button
+                        onClick={alterarTema}
+                        aria-label="Alternar tema claro/escuro"
+                    >
                         {ehTemaEscuro ? <FiSun /> : <FiMoon />}
                     </button>
                 </div>

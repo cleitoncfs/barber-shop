@@ -44,6 +44,19 @@
     border: 2px solid #b2987d;
     border-radius: 25px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    color: #b2987d;
+}
+
+.header_container button:hover {
+    background-color: #b2987d;
+    color: #fff;
+}
+
+button:focus,
+a:focus {
+    outline: 2px solid #b2987d;
+    outline-offset: 4px;
 }
 
 .modo_escuro .header_container button {
@@ -64,7 +77,7 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    display: block; /* <- importante para remover espaço extra causado por display inline */
+    display: block;
 }
 
 .secao_texto {
@@ -77,7 +90,7 @@
 
 .secao_texto div {
     width: 100%;
-    max-width: 900px;
+    max-width: 760px; /* Reduzido de 900px para leitura mais confortável */
     margin: 0 auto;
     padding: 20px;
     display: block;
@@ -91,13 +104,12 @@
 }
 
 .secao_texto div p {
-    margin-bottom: 16px; /* espaçamento entre os parágrafos */
-    line-height: 1.6; /* espaçamento entre linhas */
     font-size: 18px;
+    margin-bottom: 16px;
+    line-height: 1.6;
 }
 
 .secao_texto div p:first-of-type {
-    font-size: 18px;
     font-weight: 600;
     margin-top: 0;
 }
@@ -106,16 +118,26 @@
     margin-bottom: 0;
 }
 
-/* Modo claro */
 .modo_claro .secao_texto {
     background-color: #fff;
     color: #000;
 }
 
-/* Modo escuro */
 .modo_escuro .secao_texto {
     background-color: #1a1a1a;
-    color: #fff;
+    color: #eeeeee;
+}
+
+.modo_claro,
+.modo_escuro {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secao_texto,
+.footer,
+.header_container,
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .assinatura {
@@ -126,9 +148,14 @@
     color: #b2987d;
 }
 
-@media (max-width: 525px) {
-    .secao_texto h1 {
-        font-size: 30px;
+@media (max-width: 768px) {
+    .secao_texto div h1 {
+        font-size: 32px;
+    }
+
+    .secao_texto div p {
+        font-size: 16px;
+        margin-bottom: 14px;
     }
 
     .assinatura {
@@ -180,5 +207,15 @@
 
     .footerCredits {
         margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .secao_texto {
+        padding: 40px 16px;
+    }
+
+    .secao_texto div {
+        padding: 0;
     }
 }
