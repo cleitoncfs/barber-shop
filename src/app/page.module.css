@@ -67,10 +67,11 @@
 }
 
 .secao_texto {
-    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px 20px;
+    background-color: #fff; /* Garante que essa área seja sempre branca */
 }
 
 .secao_texto div {
@@ -78,10 +79,8 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    display: flex;
-    flex-direction: column;
+    display: block; /* Alterado de flex para block para evitar possíveis problemas */
     text-align: center;
-    gap: 30px;
 }
 
 .secao_texto div h1 {
