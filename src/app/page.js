@@ -36,13 +36,24 @@ export default function Page() {
                     <div>
                         <h1>Bem-vindo a Barber Shop</h1>
                         <p>
-                            Nossa barbearia sempre oferece profissionais de
-                            qualidade e estamos prontos para lidar com suas
-                            maiores expectativas.
+                            Na Barber Shop, oferecemos não apenas cortes
+                            impecáveis, mas uma experiência de cuidado e estilo.
                         </p>
                         <p>
-                            Nossos serviços são dedicados ao seu sucesso
-                            pessoal...
+                            Nossa equipe de profissionais altamente qualificados
+                            está sempre pronta para superar suas expectativas e
+                            garantir que você saia daqui se sentindo sua melhor
+                            versão.
+                        </p>
+                        <p>
+                            Cada serviço que oferecemos é pensado para valorizar
+                            sua personalidade e fortalecer sua confiança, porque
+                            acreditamos que um bom corte de cabelo faz toda a
+                            diferença.
+                        </p>
+                        <p>
+                            Venha conhecer nossa barbearia e descubra como
+                            podemos elevar seu visual ao próximo nível!
                         </p>
                         <p className={estilos.assinatura}>S. Kelly</p>
                     </div>
