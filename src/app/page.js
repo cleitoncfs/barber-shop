@@ -4,8 +4,9 @@ import estilos from "./page.module.css";
 import Banner from "../../public/banner.jpg";
 import Logo from "../../public/logo.png";
 import { useState } from "react";
-import { FiSun, FiMoon } from "react-icons/fi";
 import {
+    FiSun,
+    FiMoon,
     FaExternalLinkAlt,
     FaWhatsapp,
     FaInstagram,
@@ -64,6 +65,8 @@ export default function Page() {
                             podemos elevar seu visual ao próximo nível!
                         </p>
                         <p className={estilos.assinatura}>S. Kelly</p>
+
+                        {/* ✅ Botão do WhatsApp DENTRO da div */}
                         <a
                             href="https://wa.me/5567992011664"
                             target="_blank"
@@ -77,7 +80,6 @@ export default function Page() {
                 </section>
             </main>
 
-            {/* Footer */}
             <footer className={estilos.footer}>
                 <p className={estilos.footerCopyright}>
                     © {new Date().getFullYear()} Barber Shop - Todos os direitos
@@ -97,7 +99,7 @@ export default function Page() {
                     </a>
                 </p>
 
-                {/* ✅ Ícones das redes sociais */}
+                {/* ✅ Ícones sociais */}
                 <div className={estilos.iconesRedes}>
                     <a
                         href="https://instagram.com"
