@@ -64,14 +64,17 @@
     width: 100%;
     height: auto;
     object-fit: cover;
+    display: block; /* <- importante para remover espaço extra causado por display inline */
 }
 
 .secao_texto {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
-    background-color: #fff; /* Garante que essa área seja sempre branca */
+    padding: 60px 20px; /* aumenta o padding vertical */
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #fff;
 }
 
 .secao_texto div {
@@ -90,6 +93,11 @@
 .secao_texto div p:first-of-type {
     font-size: 18px;
     font-weight: 600;
+    margin-top: 0;
+}
+
+.secao_texto div p:last-of-type {
+    margin-bottom: 0;
 }
 
 .assinatura {
