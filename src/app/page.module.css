@@ -71,10 +71,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 60px 20px; /* aumenta o padding vertical */
-    margin-top: 0;
-    margin-bottom: 0;
-    background-color: #fff;
+    padding: 60px 20px;
+    margin: 0;
 }
 
 .secao_texto div {
@@ -98,6 +96,18 @@
 
 .secao_texto div p:last-of-type {
     margin-bottom: 0;
+}
+
+/* Modo claro */
+.modo_claro .secao_texto {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Modo escuro */
+.modo_escuro .secao_texto {
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 .assinatura {
