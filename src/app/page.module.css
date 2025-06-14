@@ -46,13 +46,10 @@
     cursor: pointer;
 }
 
-.modo_escuro .header_container button {
-    color: #fff;
-}
-
 .main_container {
     display: flex;
     flex-direction: column;
+    min-height: 100vh; /* Mantém a altura correta */
 }
 
 .secao_banner {
@@ -60,54 +57,11 @@
     display: flex;
 }
 
-.secao_banner img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
 .secao_texto {
-    height: 60vh;
+    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.secao_texto div {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-}
-
-.secao_texto div h1 {
-    font-size: 40px;
-}
-
-.secao_texto div p:first-of-type {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.assinatura {
-    font-family: "Great Vibes", cursive;
-    font-weight: 500;
-    font-size: 50px;
-    color: #b2987d;
-}
-
-@media (max-width: 525px) {
-    .secao_texto h1 {
-        font-size: 30px;
-    }
-
-    .assinatura {
-        font-size: 40px;
-    }
 }
 
 .footer {
@@ -116,43 +70,6 @@
     text-align: center;
     background-color: #b2987d;
     color: white;
-}
-
-.modo_escuro .footer {
-    background-color: #333;
-}
-
-.footerCopyright {
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.footerCredits {
-    font-size: 14px;
-}
-
-.footerLink {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.footerLink:hover {
-    text-decoration: underline;
-}
-
-.linkIcon {
-    margin-left: 5px;
-    font-size: 14px;
-}
-
-@media (max-width: 600px) {
-    .footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footerCredits {
-        margin-top: 10px;
-    }
+    position: relative;
+    z-index: 10;
 }
